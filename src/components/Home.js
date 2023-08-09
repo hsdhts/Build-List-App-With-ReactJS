@@ -1,12 +1,12 @@
-import React from 'react';
-import {Button, Table} from 'react-bootsrap'
-import "bootsrap/dist/bootsrap.min.css"
+import React, { Fragment } from 'react';
+import {  Table } from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Employees from './Employees';
 
-function Home () {
+function Home() {
     return (
         <Fragment>
-            <div style={{margin:"10rem"}}>
+            <div style={{ margin: "10rem" }}>
                 <Table striped bordered hover size="sm">
                     <thead>
                         <tr>
@@ -20,28 +20,28 @@ function Home () {
                     </thead>
                     <tbody>
                         {
-                            Employees && Employees.length > 0 
-                            ?
-                            Employees.map((item) => {
-                                return (
-                                    <tr>
+                            Employees && Employees.length > 0
+                                ? Employees.map((item, index) => (
+                                    <tr key={index}>
                                         <td>
-                                         {item.Name}   
+                                            {item.Name}
                                         </td>
                                         <td>
                                             {item.Age}
                                         </td>
                                     </tr>
+                                ))
+                                : (
+                                    <tr>
+                                        <td colSpan="2">No data available</td>
+                                    </tr>
                                 )
-                            })
-                            :
-                            "No data available"
                         }
                     </tbody>
                 </Table>
             </div>
         </Fragment>
-    )
+    );
 }
 
-export default Home
+export default Home;
