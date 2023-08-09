@@ -6,14 +6,20 @@ const Employees = [
     },
     {
         id:"2",
-        Name: "Jack Grealish",
-        Age: "26",
+        Name: "Bang Dodo",
+        Age: "38",
     },
     {
         id:"3",
         Name: "Kylian Mbappe",
         Age: "24",
-    }
+    },
+    {
+        id:"4",
+        Name: "Bang Messi",
+        Age: "36",
+    },
+    
 ]
 
 export default Employees;

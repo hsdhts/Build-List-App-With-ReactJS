@@ -37,7 +37,8 @@ function Add() {
                 </Form.Control>
             </Form.Group>
 
-            <Button onClick={(e) => handleSubmit} type="submit">Submit</Button>
+            <Button onClick={handleSubmit} type="submit">Submit</Button>
+
         </Form>
        </div>
     )

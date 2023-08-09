@@ -7,7 +7,12 @@ import {Link, useNavigate} from 'react-router-dom'
 function Home() {
 
     let history = useNavigate()
-
+    
+    const handleEdit = (id, name, age) => {
+        localStorage.setItem('Name', name )
+        localStorage.setItem('Age', age )
+        localStorage.setItem('Id', id )
+    }
     const handleDelete = (id) => {
         var index = Employees.map(function(e) {
             return e.id
@@ -37,7 +42,7 @@ function Home() {
                   <td>{item.Age}</td>
                   <td>
                   <Link to={`/edit`}>
-                  <Button style={{ marginRight: '10px' }} onClick={() => { alert(item.id) }}>Edit</Button>
+                  <Button style={{ marginRight: '10px' }} onClick={() => { handleEdit(item.id, item.Name, item.Age) }}>Edit</Button>
                   </Link>
                 <Button style={{ marginLeft: '10px' }} onClick={() => { handleDelete(item.id) }}>DELETE</Button>
                   </td>
