@@ -1,6 +1,6 @@
 ## Demo App 
 
-This is the url for demo app [List App](https://list-1yjadv8yf-husadahts.vercel.app/)
+This is the url for demo application [List App](https://list-1yjadv8yf-husadahts.vercel.app/)
 
 # Getting Started with Create React App
 
